@@ -41,6 +41,10 @@ import org.jfree.data.category.DefaultCategoryDataset;
  */
 public class ComponentesFXApp extends Application {
 
+    public static void main(String[] args) {
+        launch(args);
+    }
+
     private final ObservableList<String> historial = FXCollections.observableArrayList();
     private final Map<String, Integer> contadorTipos = new LinkedHashMap<>();
     private final Path carpetaSalidas = Path.of("salidas");
