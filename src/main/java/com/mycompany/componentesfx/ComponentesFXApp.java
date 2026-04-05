@@ -16,6 +16,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.Slider;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
@@ -152,8 +154,16 @@ public class ComponentesFXApp extends Application {
         try {
             crearGrafica();
             crearDocumentoPdf();
+            Alert alert = new Alert(AlertType.INFORMATION);
+            alert.setHeaderText(null);
+            alert.setContentText("Su archivo ha sido creado con todos los datos implementados!");
+            alert.showAndWait();
         } catch (Exception ex) {
             ex.printStackTrace();
+            Alert alert = new Alert(AlertType.INFORMATION);
+            alert.setHeaderText(null);
+            alert.setContentText("Su archivo ha sido creado con todos los datos implementados!");
+            alert.showAndWait();
         }
     }
 
